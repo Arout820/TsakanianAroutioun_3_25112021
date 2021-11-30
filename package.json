@@ -1,0 +1,19 @@
+{
+  "name": "p3_tsakanian_aroutioun",
+  "version": "1.0.0",
+  "description": "Projet 3 formation développement web",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arout820/TsakanianAroutioun_3_25112021.git"
+  },
+  "author": "TSAKANIAN Aroutioun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arout820/TsakanianAroutioun_3_25112021/issues"
+  },
+  "homepage": "https://github.com/Arout820/TsakanianAroutioun_3_25112021#readme"
+}
