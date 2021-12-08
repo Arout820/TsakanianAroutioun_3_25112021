@@ -1,0 +1,167 @@
+// PRESENTATION
+
+.destination{
+    display: flex;
+    background: rgb(230, 230, 230);
+    color: black;
+    padding: 5px;
+    box-shadow: inset 0px 4px 4px darken(rgb(238, 238, 238),10);
+    justify-content: center;
+    &__icn{
+        margin: auto 13px auto 0px;
+        color: rgb(53, 53, 53);
+    }
+    &__title{
+        margin-right: 13px;
+        color: rgb(53, 53, 53);
+    }
+}
+
+.search-restaurants{
+    background: rgb(249, 249, 249);
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    &__title{
+        font-size: 26px;
+        font-weight: bold;
+        width: 81%;
+        margin: auto;
+    }
+    &__description{
+        color: rgb(53, 53, 53);
+        font-weight: 300;
+    }
+    &__btn{
+        background: linear-gradient($color-secondary,$color-primary);
+        color: white;
+        padding: 15px;
+        border-radius: 30px;
+        display: block;
+        width: 60%;
+        margin: auto;
+        margin-top: 30px;
+    }
+}
+
+// FUNCTIONING
+
+.functioning{
+    margin: 20px;
+}
+
+.title{
+    display: block;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.summary-element{
+    display: flex;
+    background: rgb(249, 249, 249);
+    margin-bottom: 25px;
+    border-radius: 21px;
+    box-shadow: 0px 0px 8px darken(rgb(249, 249, 249), 12);
+    padding: 8px;
+    position: relative;
+    &__position{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background: #9356DC;
+        border-radius: 100px;
+        height: 25px;
+        width: 25px;
+        margin: auto 0px auto;
+        position: absolute;
+        bottom: 20px;
+        left: -13px;
+    }
+    &__icn{
+        margin: auto 0px auto;
+        color: rgb(126, 125, 125);
+        margin-left: 28px;
+        margin-right: 28px;
+    }
+    &__wording{
+        font-weight: bold;
+    }
+}
+
+// RESTAURANTS
+
+.restaurants{
+    padding: 20px;
+    background: rgb(249, 249, 249);
+}
+
+.restaurant{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px grey;
+    margin-bottom: 20px;
+    background: white;
+    overflow: hidden;
+    &__img{
+        border-radius: 15px 15px 0px 0px;
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        height: 250px;
+    }
+    &__presentation{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        background: white;
+        position: relative;
+        border-radius: 0px 0px 15px 15px;
+        &__name{
+            font-weight: bold;
+        }
+        &__location{
+
+        }
+        &__favourite{
+            position: absolute;
+            right: 15px;
+            top: 20px;
+            &:hover{
+                background-color: linear-gradient($color-secondary,$color-primary);
+            }
+        }
+    }
+}
+
+// FOOTER
+
+footer{
+    background: rgb(36, 36, 36);
+    margin-top: 60px;
+    padding: 20px;
+}
+
+.logo-footer{
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.list-footer{
+    padding: 0px;
+    list-style-type: none;
+    &__elem{
+        margin-bottom: 5px;
+        &__icn{
+            color: white;
+            width: 25px;
+        }
+        &__link{
+            color: white;
+        }
+    }
+}
+
