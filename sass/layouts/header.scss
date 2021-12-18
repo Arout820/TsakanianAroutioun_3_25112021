@@ -6,9 +6,14 @@ header{
 .heading{
     display: flex;
     justify-content: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    position: relative;
+    &__btnprevious{
+       color: rgb(53, 53, 53); 
+       position: absolute;
+       left: 15px;
+       top: 30px;
+    }
     &__logo{
-        width: 180px;
+        width: 185px;
     }
 }

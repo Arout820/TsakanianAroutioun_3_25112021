@@ -1,0 +1,29 @@
+// FOOTER
+
+footer{
+    background: rgb(36, 36, 36);
+    margin-top: 60px;
+    padding: 20px;
+    padding-top: 30px;
+}
+
+.logo-footer{
+    font-size: 20px;
+    font-weight: 100;
+    color: white;
+}
+
+.list-footer{
+    padding: 0px;
+    list-style-type: none;
+    &__elem{
+        margin-bottom: 5px;
+        &__icn{
+            color: white;
+            width: 25px;
+        }
+        &__link{
+            color: white;
+        }
+    }
+}
