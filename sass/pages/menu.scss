@@ -99,4 +99,8 @@
     text-align: center;
     align-self: center;
     box-shadow: 0px 0px 8px darken(rgb(238, 238, 238),15);
+    &:hover{
+        background: linear-gradient(lighten($color-secondary,4) , lighten($color-primary,4));
+        box-shadow: 0px 2px 18px darken(rgb(238, 238, 238), 15);
+    }
 }

@@ -50,21 +50,27 @@
         border-radius: 30px;
         width: 250px;
         margin-top: 20px;
-        box-shadow: 0px 0px 8px darken(rgb(238, 238, 238),15);
+        box-shadow: 0px 0px 8px darken(rgb(238, 238, 238), 15);
+        transition: background 600ms, box-shadow 600ms;
+        &:hover{
+            background: linear-gradient(lighten($color-secondary,4) , lighten($color-primary,4));
+            box-shadow: 0px 2px 18px darken(rgb(238, 238, 238), 15);
+        }
     }
 }
 
 // FUNCTIONING
 
 .functioning{
+    display: flex;
+    flex-direction: column;
     margin: 20px;
-}
-
-.title{
-    display: block;
-    font-weight: bold;
-    font-size: 25px;
-    margin-bottom: 25px;
+    &__title{
+        width: 100%;
+        font-weight: bold;
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
 }
 
 .summary-element{
@@ -110,13 +116,18 @@
 .restaurant{
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin-left: 0px;
+    margin-right: 0px;
     border-radius: 15px;
     box-shadow: 0px 0px 8px darken(rgb(238, 238, 238),15);
     margin-bottom: 20px;
     background: white;
     overflow: hidden;
     position: relative;
+    &:hover{
+        filter: brightness(1.1);
+        box-shadow: 0px 0px 8px darken(rgb(238, 238, 238),40);
+    }
 }
 
 .restaurant-link{
@@ -157,10 +168,46 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: 1px;
-        transition: 600ms ease-in-out;
+        transition: -webkit-text-fill-color 600ms ease-in-out;
         &:hover{
-            -webkit-text-fill-color: #9356DC;
+            -webkit-text-fill-color: initial;
             -webkit-text-stroke-width: 0px;
+            background-clip: initial;
+            -webkit-background-clip: initial;
+            background: linear-gradient(yellow,red);
         }
 }
+
+@media screen and (min-width: 768px) {
+    
+    .summary{
+        display: flex;
+        flex-wrap: wrap;
+        &-element{
+            margin-right: 15px;
+            margin-left: 15px;
+            flex: 1 0 auto;
+        }
+    }
+
+    .restaurants{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &__title{
+            width: 100%;
+            display: block;
+            font-weight: bold;
+            font-size: 25px;
+            margin-bottom: 25px;        }
+    }
+    
+    .restaurant{
+       margin-right: 15px;
+       margin-left: 15px;
+       flex: 1 0 450px;
+    }
+
+}
+    
 
