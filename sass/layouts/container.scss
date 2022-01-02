@@ -87,7 +87,7 @@
         justify-content: center;
         align-items: center;
         color: white;
-        background: #9356DC;
+        background: $color-primary;
         border-radius: 100px;
         height: 25px;
         width: 25px;
@@ -149,7 +149,7 @@
         width: 100%;
     }
     &__new{
-        background-color: #95e2d2;
+        background-color: $color-tertiary;
         color: #1b6651;
         border-radius: 2px;
         position: absolute;
@@ -180,7 +180,7 @@
         transition: color 300ms ease-in-out;
         color: black;
         &:hover{
-            background: linear-gradient(#9356DC, #FF79DA);
+            background: linear-gradient($color-primary, $color-secondary);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
