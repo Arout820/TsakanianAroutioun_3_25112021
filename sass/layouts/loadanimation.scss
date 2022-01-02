@@ -1,0 +1,47 @@
+// LOAD ANIMATION
+
+.load-animation{
+    background: white;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: extinction 1s 2.5s forwards;
+    &__spinner{
+        position: absolute;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        background: linear-gradient($color-primary, $color-secondary);;
+        animation: moving 2.5s;
+    }
+    &__icn{
+        color: white;
+    }
+}
+
+// LOAD ANIMATION KEYFRAMES
+
+@keyframes moving{
+    0% {
+        transform: translateY(-600px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(2turn);
+    }
+}
+
+@keyframes extinction{
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

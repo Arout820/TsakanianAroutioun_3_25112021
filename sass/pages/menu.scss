@@ -1,3 +1,4 @@
+// MAIN CONTENT
 
 .img-restaurant{
         object-fit: cover;
@@ -5,7 +6,7 @@
         width: 100%;
 }
 
-.menu-restaurant{
+.restaurant-content{
     display: flex;
     flex-direction: column;
     position: relative;
@@ -31,7 +32,7 @@
             transition: color 300ms ease-in-out;
             color: black;
             &:hover{
-                background: linear-gradient(#9356DC, #FF79DA);
+                background: linear-gradient($color-primary, $color-secondary);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -42,7 +43,7 @@
     }
 }
 
-.menu-restaurant__name__favourite.fa-stack-1x{
+.restaurant-content__name__favourite.fa-stack-1x{
     left: unset;
     width: unset;
     font-weight: 100;
@@ -64,14 +65,14 @@
             display: block;
             width: 37px;
             height: 2px;
-            background: #95e2d2;
+            background: $color-tertiary;
             position: absolute;
             bottom: -5px;
         }
     }
 }
 
-.menu-type__elements{
+.menu-content{
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -83,57 +84,55 @@
     animation: shadingmoving 1s 0.2s 1;
     position: relative;
     overflow: hidden;
-    &__title{
-        font-weight: bold;
-    }
-    &__infos{
-        display: flex;
-        margin-top: 4px;
-        &__description{
-            font-size: 15px;
-            color: rgb(75, 75, 75);
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            width: 80%;
-        }
-        &__price{
-            width: 20%;
-            text-align: center;
-            font-size: 15px;
+    &__elements{
+        width: 100%;
+        display: block;
+        transition: 800ms;
+        &__title{
             font-weight: bold;
         }
+        &__infos{
+            display: flex;
+            margin-top: 4px;
+            &__description{
+                font-size: 15px;
+                color: rgb(75, 75, 75);
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                width: 80%;
+            }
+            &__price{
+                width: 20%;
+                text-align: center;
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+    &__validate{
+        background: #95e2d2;
+        color: white;
+        padding: 0px;
+        width: 50px;
+        display: block;
+        position: absolute;
+        left: 100%;
+        line-height: 50px;
+        text-align: center;
+        transition: 800ms;
     }
 }
 
-.TEST{
-    width: 100%;
-    display: block;
-    transition: 800ms;
-}
-
-.CHECKED{
-    background: #95e2d2;
-    color: white;
-    padding: 0px;
-    width: 50px;
-    display: block;
-    position: absolute;
-    left: 100%;
-    line-height: 50px;
-    text-align: center;
-    transition: 800ms;
-}
-
-.menu-type__elements:hover > .CHECKED{
+.menu-content:hover > .menu-content__validate{
     left: calc(100% - 50px);
 }
 
-.menu-type__elements:hover > .TEST{
+.menu-content:hover > .menu-content__elements{
     width: 87%;
 }
 
-.menu-restaurant__command-btn{
+.restaurant-content__command-btn{
     background: linear-gradient($color-secondary,$color-primary);
     color: white;
     padding: 15px 0 15px 0;
@@ -149,9 +148,6 @@
         box-shadow: 0px 2px 18px darken(rgb(238, 238, 238), 15);
     }
 }
-
-
-
 
 @keyframes shadingmoving {
     0% {
