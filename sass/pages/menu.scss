@@ -27,17 +27,27 @@
         &__favourite{
             position: absolute;
             right: 40px;
-            top: 30px;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -webkit-text-stroke-width: 1px;
-            transition: 600ms ease-in-out;
+            top: 20px;
+            transition: color 300ms ease-in-out;
+            color: black;
             &:hover{
-                -webkit-text-fill-color: #9356DC;
-                -webkit-text-stroke-width: 0px;
+                background: linear-gradient(#9356DC, #FF79DA);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: white;
+                cursor: pointer;
             }
         }
+    }
+}
+
+.menu-restaurant__name__favourite.fa-stack-1x{
+    left: unset;
+    width: unset;
+    font-weight: 100;
+    &:hover{
+        font-weight: 800;
     }
 }
 
@@ -46,7 +56,7 @@
         display: flex;
         margin-top: 35px;
         color: rgb(75, 75, 75);
-        font-size: 0.91rem;
+        font-size: 15px;
         margin-left: 6px;
         position: relative;
         &::after{
@@ -66,26 +76,61 @@
     flex-direction: column;
     margin-top: 20px;
     background-color: white;
-    padding: 10px 15px 7px 10px;
+    padding: 15px 15px 7px 15px;
     border-radius: 15px;
     box-shadow: 0px 0px 8px darken(rgb(238, 238, 238),15);
     cursor: pointer;
+    animation: shadingmoving 1s 0.2s 1;
+    position: relative;
+    overflow: hidden;
     &__title{
         font-weight: bold;
     }
     &__infos{
         display: flex;
-        justify-content: space-between;
         margin-top: 4px;
         &__description{
-            font-size: 0.85rem;
-            color: rgb(75, 75, 75)
+            font-size: 15px;
+            color: rgb(75, 75, 75);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 80%;
         }
         &__price{
-            font-size: 0.9rem;
+            width: 20%;
+            text-align: center;
+            font-size: 15px;
             font-weight: bold;
         }
     }
+}
+
+.TEST{
+    width: 100%;
+    display: block;
+    transition: 800ms;
+}
+
+.CHECKED{
+    background: #95e2d2;
+    color: white;
+    padding: 0px;
+    width: 50px;
+    display: block;
+    position: absolute;
+    left: 100%;
+    line-height: 50px;
+    text-align: center;
+    transition: 800ms;
+}
+
+.menu-type__elements:hover > .CHECKED{
+    left: calc(100% - 50px);
+}
+
+.menu-type__elements:hover > .TEST{
+    width: 87%;
 }
 
 .menu-restaurant__command-btn{
@@ -102,5 +147,35 @@
     &:hover{
         background: linear-gradient(lighten($color-secondary,4) , lighten($color-primary,4));
         box-shadow: 0px 2px 18px darken(rgb(238, 238, 238), 15);
+    }
+}
+
+
+
+
+@keyframes shadingmoving {
+    0% {
+        opacity: 0%;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (min-width: 668px) {
+    
+    .menu-types{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .menu-type{
+        margin-left: 14px;
+        margin-right: 14px;
+        flex: 1 0 250px;
     }
 }

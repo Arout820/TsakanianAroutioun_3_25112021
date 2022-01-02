@@ -81,6 +81,7 @@
     box-shadow: 0px 0px 8px darken(rgb(238, 238, 238), 15);
     padding: 8px;
     position: relative;
+    transition: background 200ms ease-in-out;
     &__position{
         display: flex;
         justify-content: center;
@@ -104,6 +105,15 @@
     &__wording{
         font-weight: bold;
     }
+    &:hover{
+        background: #9256dc2f;
+        cursor: pointer;
+        transform: scale(1.01);
+    }
+}
+
+.summary-element:hover > .summary-element__icn{
+    color: #9356DC;
 }
 
 // RESTAURANTS
@@ -157,26 +167,38 @@
         &__name{
             font-weight: bold;
         }
+        &__location{
+            margin-top: 3px;
+        }
     }
 }
 
 .restaurant__favourite{
         position: absolute;
         right: 15px;
-        bottom: 35px;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke-width: 1px;
-        transition: -webkit-text-fill-color 600ms ease-in-out;
+        bottom: 20px;
+        transition: color 300ms ease-in-out;
+        color: black;
         &:hover{
-            -webkit-text-fill-color: initial;
-            -webkit-text-stroke-width: 0px;
-            background-clip: initial;
-            -webkit-background-clip: initial;
-            background: linear-gradient(yellow,red);
+            background: linear-gradient(#9356DC, #FF79DA);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: white;
+            cursor: pointer;
         }
 }
+
+.restaurant__favourite.fa-stack-1x{
+    left: unset;
+    width: unset;
+    font-weight: 100;
+    &:hover{
+        font-weight: 800;
+    }
+}
+
+
 
 @media screen and (min-width: 768px) {
     

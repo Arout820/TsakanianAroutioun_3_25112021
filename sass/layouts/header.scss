@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     animation: extinction 1s 2.5s forwards;
+    display: none;
     &__spinner{
         position: absolute;
         width: 10rem;
@@ -44,7 +45,7 @@ header{
        color: rgb(53, 53, 53); 
        position: absolute;
        left: 15px;
-       top: 30px;
+       top: 22px;
     }
 }
 
