@@ -30,7 +30,6 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   animation: extinction 1s 2.5s forwards;
-  display: none;
 }
 .load-animation__spinner {
   position: absolute;
